@@ -1,4 +1,3 @@
-dockerstack-dashboard
-=====================
+# dockerstack
 
-This will have the dashboard to make necessary events on the Public and Private Cloud Infrastructures
+a [Sails](http://sailsjs.org) application
