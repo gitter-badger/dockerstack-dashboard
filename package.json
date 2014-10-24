@@ -1,8 +1,8 @@
 {
   "name": "dockerstack",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "version": "0.0.1",
+  "description": "Dockerstack Application Dashboard",
   "keywords": [],
   "dependencies": {
     "sails": "~0.10.4",
@@ -31,7 +31,9 @@
     "connect-redis": "1.4.5",
     "dockerode":"*",
     "dockerspaniel":"*",
-    "aws-sdk": "*"
+    "aws-sdk": "*",
+    "bcrypt":"*",
+    "crypto ":"*"
   },
   "scripts": {
     "start": "node app.js",
@@ -42,6 +44,6 @@
     "type": "git",
     "url": "git://github.com/vagrant/dockerstack.git"
   },
-  "author": "vagrant",
+  "author": "K.G.R Vamsi",
   "license": ""
 }

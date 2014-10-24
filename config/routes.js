@@ -40,8 +40,13 @@ module.exports.routes = {
 
     'get /': 'Indexcontroller.home',
     'get /template/index':'Templatecontroller.index',
+    'get /testing/test': 'Templatecontroller.testing',
     'get /auth/login': 'Authcontroller.login',
-    'post /template/create':'Templatecontroller.create'
+    'get /aut/logout' : 'Authcontroller.logout',
+    'get /index/dashboard' : 'Indexcontroller.dashboard',
+    'post /template/create':'Templatecontroller.create',
+    'post /auth/register': 'Authcontroller.registration',
+    'post /auth/process' : 'Authcontroller.process'
 
   /***************************************************************************
   *                                                                          *

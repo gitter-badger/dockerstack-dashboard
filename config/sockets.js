@@ -49,12 +49,12 @@ module.exports.sockets = {
   * flashsockets by adding 'flashsocket' to this list:                       *
   *                                                                          *
   ***************************************************************************/
-  // transports: [
-  //   'websocket',
-  //   'htmlfile',
-  //   'xhr-polling',
-  //   'jsonp-polling'
-  // ],
+  transports: [
+   'websocket',
+   'htmlfile',
+   'xhr-polling',
+   'jsonp-polling'
+  ],
 
   /***************************************************************************
   *                                                                          *
@@ -184,5 +184,12 @@ module.exports.sockets = {
   ***************************************************************************/
 
   // origins: '*:*',
+
+  // Should we use heartbeats to check the health of Socket.IO connections?
+  heartbeats: true,
+
+  // The maximum duration of one HTTP poll-
+  // if it exceeds this limit it will be closed.
+  'polling duration': 20
 
 };

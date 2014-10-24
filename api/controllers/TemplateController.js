@@ -8,65 +8,67 @@
 var ds = require('dockerspaniel');
 
 
-
 module.exports = {
 
-  /**
-    *
-    * `TemplateController.index()
-   */
-  index: function(req, res){
+    /**
+     *
+     * `TemplateController.index()
+     */
 
-      var data = {
-          from: 'ubuntu:12.04',
-          maintainer: 'John Smith',
-          steps: [
-              {
-                  instruction: 'run',
-                  arguments: 'apt-get update'
-              },
-              {
-                  instruction: 'run',
-                  arguments: 'apt-get install -y nodejs',
-                  only: [
-                      'nodejs'
-                  ]
-              },
-              {
-                  instruction: 'cmd',
-                  arguments: 'echo $hello',
-                  comment:'update'
-              },
-              {
-                  instruction: 'run',
-                  arguments: 'apt-get install -y mysql-server mysql-client',
-                  unless: [
-                      'no_database'
-                  ]
-              }
-          ]
-      };
+    index: function (req, res) {
+
+        sails.log(req.socket._connecting);
 
 
-      return res.view({title: "Dockerstack.org"});
-  },
+        return res.view({title: "Dockerstack.org"});
+    },
 
-  /**
-   * `TemplateController.create()`
-   */
-  create: function (req, res) {
-      var data =req.body.databody;
+    /**
+     * `TemplateController.create()`
+     */
 
-      var tags=[];
+    create: function (req, res) {
 
-      ds.generateContents(data,tags, function(err, contents) {
-          if (err) throw err;
-          console.log(contents);
-      });
+        var data = req.body.databody;
 
-      return res.json({
-      todo: 'create() is not implemented yet!'
-    });
-  }
+        var tags = [];
+
+        ds.generateContents(data, tags, function (err, contents) {
+
+            if (err) throw err;
+
+            console.log(contents);
+
+            return res.send("Template Created");
+
+
+        });
+    },
+
+    testing: function (req, res) {
+
+        var room = req.param('room');
+
+        if (req.isSocket){
+
+            sails.sockets.join(req.socket,room);
+
+            User.find().exec(function(err,ress){
+
+                console.log("Ping");
+
+                res.send(ress);
+
+            })
+
+
+        }else {
+
+            sails.log("Sorry it is not a Socket Request");
+
+        }
+
+    }
+
 };
 
