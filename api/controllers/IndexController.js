@@ -6,6 +6,7 @@
  */
 
 var Docker = require('dockerode');
+var changeCase = require('change-case');
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport();
 
@@ -27,14 +28,19 @@ module.exports = {
 
         console.log("Hello");
 
-        return res.view({title: appTitle});
+        return res.view({title: appTitle ,user:req.session.passport.user} );
     },
 
     dashboard: function(req,res){
 
+        var str = req.session.passport.user,
+            user = changeCase.pascal(str);
+
         sails.log(req.session.passport.user);
 
-        return res.view({title: appTitle})
+        sails.log(req.headers['user-agent']);
+
+        return res.view({title: appTitle, user:user})
     },
 
     subscribe: function(req,res){
