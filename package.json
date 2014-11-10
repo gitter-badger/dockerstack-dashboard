@@ -33,7 +33,8 @@
     "dockerspaniel":"*",
     "aws-sdk": "*",
     "bcrypt":"*",
-    "crypto ":"*"
+    "crypto ":"*",
+    "change-case":"*"
   },
   "scripts": {
     "start": "node app.js",

@@ -38,13 +38,15 @@ module.exports.routes = {
     view:'index'
   }*/
 
-    'get /': 'Indexcontroller.home',
-    'get /template/index':'Templatecontroller.index',
-    'get /testing/test': 'Templatecontroller.testing',
+    'get /': '/auth/login',
+    'get /index/public':'Publiccontroller.index',
+    'get /index/private': 'Privatecontroller.index',
+    'get /index/deploy': 'Deploycontroller.index',
+    'get /testing/test': 'Publiccontroller.testing',
     'get /auth/login': 'Authcontroller.login',
     'get /aut/logout' : 'Authcontroller.logout',
     'get /index/dashboard' : 'Indexcontroller.dashboard',
-    'post /template/create':'Templatecontroller.create',
+    'post /template/create':'Publiccontroller.create',
     'post /auth/register': 'Authcontroller.registration',
     'post /auth/process' : 'Authcontroller.process'
 
