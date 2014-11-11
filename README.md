@@ -62,6 +62,12 @@
 
 <p> Sailor - The Dockerstack Dashboard service is the service which controls the Docker based Infrastrucutre on Public and Private Cloud.
 
+Javascript and Jquery are used to manupulate the dom elements when required and the total fronend framework structure is maintained by Angularjs.
+
+Mostly the Data will be updated through Ajax or through Websockets.
+
+For Server Based Information and to show them through graphs we are using the D3 Graphs which inreturn the data is being populated for Real time Data Metrics to show at the Frontend.
+
 The Service have the following modules
 		
 			1)User Authentication
