@@ -1,6 +1,6 @@
 # Dockerstack-Sailor
 
-
+[ ![Codeship Status for dockerstack/dockerstack-dashboard](https://codeship.com/projects/aff34900-4be4-0132-a5b4-6e46eafdf5e7/status)](https://codeship.com/projects/46878)
 [![Coverage Status](https://img.shields.io/coveralls/dockerstack/dockerstack-dashboard.svg)](https://coveralls.io/r/dockerstack/dockerstack-dashboard)
 
 <p>This is the Dashboard service written for the Dockerstack application to control the Public and Private Cloud resources from single dashboard.
@@ -74,4 +74,4 @@ The Service have the following modules
 			2)Rolde Based Strategy
 			3)Public Cloud Infrastructure Management (Aws and Azure as of now)
 			4)Private Cloud Infrastrucutre Management (Openstack and Vmware as of now)
-			5)Integrated Deployments
+			5)Integrated Deployments11/11/2014 8:39:49 PM 11/11/2014 8:39:51 PM 
