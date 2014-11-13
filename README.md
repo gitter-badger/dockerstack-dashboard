@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/dockerstack/dockerstack-dashboard.png?label=ready&title=Ready)](https://waffle.io/dockerstack/dockerstack-dashboard)
 # Dockerstack-Sailor
 
 [ ![Codeship Status for dockerstack/dockerstack-dashboard](https://codeship.com/projects/aff34900-4be4-0132-a5b4-6e46eafdf5e7/status)](https://codeship.com/projects/46878)
