@@ -18,15 +18,21 @@ module.exports = {
           required: true
       },
       accesskey:{
-          type: 'string'
+          type: 'string',
+          size:100
       },
       secretkey:{
-          type:'string'
+          type:'string',
+          size:100
       },
       region: {
           type: 'string'
       }
 
-  }
+  },
+    toJSON: function() {
+        var obj = this.toObject();
+        return obj;
+    }
 };
 

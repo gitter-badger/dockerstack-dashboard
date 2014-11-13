@@ -48,7 +48,9 @@ module.exports.routes = {
     'get /index/dashboard' : 'Indexcontroller.dashboard',
     'post /template/create':'Publiccontroller.create',
     'post /auth/register': 'Authcontroller.registration',
-    'post /auth/process' : 'Authcontroller.process'
+    'post /auth/process' : 'Authcontroller.process',
+    'post /public/awsupdate' : 'Publiccontroller.saveawscred',
+    'post /public/checkawscred' : 'Publiccontroller.checkAwscred'
 
   /***************************************************************************
   *                                                                          *

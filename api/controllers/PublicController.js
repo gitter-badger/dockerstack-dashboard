@@ -6,7 +6,8 @@
  */
 
 var ds = require('dockerspaniel'),
-    changeCase = require('change-case');
+    changeCase = require('change-case'),
+    AWS = require('aws-sdk');
 
 
 module.exports = {
@@ -22,7 +23,6 @@ module.exports = {
 
         var str = req.session.passport.user,
             user = changeCase.pascal(str);
-
 
         return res.view({title: "Dockerstack.org",user:user});
     },
@@ -67,6 +67,34 @@ module.exports = {
             }
 
         })
+
+
+    },
+
+    checkAwscred: function(res,req){
+
+        var accessid=req.body.accessid,
+            secretkey=req.body.secretkey,
+            region=req.body.region;
+
+        AWS.config.update({accessKeyId: accessid, secretAccessKey: secretkey, region: region });
+
+        var ec2 = new AWS.EC2();
+
+        var params = {};
+
+        ec2.describeInstances(params, function (err, data) {
+            if (err) {
+                console.log(err.code, err.stack);
+                res.send(err.code);
+
+            } else {
+
+                sails.log("credentials are working");
+                res.send("Authorized")
+            }
+        })
+
 
     },
 
