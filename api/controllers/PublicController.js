@@ -49,6 +49,27 @@ module.exports = {
         });
     },
 
+    saveawscred: function (req, res){
+
+        var secretkey=req.body.secretkey,
+            accessid=req.body.accessid,
+            zone=req.body.zone;
+
+        console.log(secretkey,accessid,zone);
+
+        Public.create({username:req.session.passport.user,service:"AWS",accesskey:accessid,secretkey:secretkey,region:zone}).exec(function (err,ress) {
+
+            if (err){
+                console.log(err.message);
+            } else {
+                sails.log("Credentials Created");
+                res.redirect('/index/public');
+            }
+
+        })
+
+    },
+
     testing: function (req, res) {
 
         var room = req.param('room');
