@@ -50,7 +50,9 @@ module.exports.routes = {
     'post /auth/register': 'Authcontroller.registration',
     'post /auth/process' : 'Authcontroller.process',
     'post /public/awsupdate' : 'Publiccontroller.saveawscred',
-    'post /public/checkawscred' : 'Publiccontroller.checkAwscred'
+    'post /public/checkawscred' : 'Publiccontroller.checkAwscred',
+    'post /private/checkdedcred' : 'Privatecontroller.checkcredded',
+    'post /private/creddedserver': 'Privatecontroller.savededservercred'
 
   /***************************************************************************
   *                                                                          *
