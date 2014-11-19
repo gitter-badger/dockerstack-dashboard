@@ -1,5 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/dockerstack/dockerstack-dashboard.png?label=ready&title=Ready)](https://waffle.io/dockerstack/dockerstack-dashboard)
 # Dockerstack-Sailor
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/dockerstack/dockerstack-dashboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [ ![Codeship Status for dockerstack/dockerstack-dashboard](https://codeship.com/projects/aff34900-4be4-0132-a5b4-6e46eafdf5e7/status)](https://codeship.com/projects/46878)
 [![Coverage Status](https://img.shields.io/coveralls/dockerstack/dockerstack-dashboard.svg)](https://coveralls.io/r/dockerstack/dockerstack-dashboard)
